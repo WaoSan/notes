@@ -14,3 +14,10 @@ Executors.newScheduledThreadPool
 //创建一个单线程化的线程池，支持定时及周期性任务执行
 Executors.newSingleThreadScheduledExecutor
 ```
++ 电报NotificationCenter对监听的设计,使用不同的监听集合,
+```
+    private SparseArray<ArrayList<Object>> observers = new SparseArray<>();
+    private SparseArray<ArrayList<Object>> removeAfterBroadcast = new SparseArray<>();
+    private SparseArray<ArrayList<Object>> addAfterBroadcast = new SparseArray<>();
+```
+当正在执行监听时,增加新的监听则加到addAfterBroadcast集合里,待执行完监听事件把addAfterBroadcast加到observers集合里,这样有效避免了一个集合同时进行添加和移除操作
