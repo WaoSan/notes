@@ -21,3 +21,9 @@ Executors.newSingleThreadScheduledExecutor
     private SparseArray<ArrayList<Object>> addAfterBroadcast = new SparseArray<>();
 ```
 当正在执行监听时,增加新的监听则加到addAfterBroadcast集合里,待执行完监听事件把addAfterBroadcast加到observers集合里,这样有效避免了一个集合同时进行添加和移除操作
++ 换肤(Android-skin-support)
++ 设计模式
+    + [状态模式](https://juejin.im/post/5de1db1c51882560a2323966#heading-9)
+    + [策略模式](https://juejin.im/post/5def654f51882512302daeef)
+    + [责任链模式](https://www.jianshu.com/p/7fa31c57cbb5)
+    + [代理模式]()
